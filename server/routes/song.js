@@ -1,7 +1,7 @@
 'use strict';
 const Song = require('../models/songs');
 const express = require('express');
-const { routeGuard } = require('./../middleware/routeguard');
+//const { routeGuard } = require('./../middleware/routeguard');
 
 const router = new express.Router();
 

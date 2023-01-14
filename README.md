@@ -2,13 +2,13 @@
 
 ## Server
 
-### Models
+### Models - Done
 
 - Song model - link, name, image(openAI), author
 - comments
 - user
 
-### Endpoints
+### Endpoints - Done
 
 - GET /songs - fetch all songs
 - GET/songs/:id
@@ -20,7 +20,8 @@
 
 ### Pages
 
-- HomePage
+- HomePage - Soumia
+- AccountPage - Soumia
 - SongAllList
 - SongSinglePage
 - SongCreate
@@ -28,13 +29,13 @@
 
 ### Components
 
-- SongContent => single song
-- SongList => multiple songs
-- SongForm => create or update
+- SongContent => single song - done
+- SongList => multiple songs - done
+- SongForm => create or update - done
 - SongButton => delete
-- Navbar
+- Navbar - Julia
 
-### Services
+### Services -done
 
 - songLoadSingle => GET/songs/:id
 - songLoadAll => GET /songs

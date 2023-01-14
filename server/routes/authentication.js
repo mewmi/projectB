@@ -1,13 +1,11 @@
 'use strict';
 
 const express = require('express');
-const User = require('../models/user');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/user');
-const { RuleTester } = require('eslint');
-const { routeGuard } = require('./../middleware/routeguard');
+const { routeGuard } = require('../middleware/routeguard');
 
 const saltRounds = 10;
 
@@ -32,7 +30,7 @@ router.post('/signup', (req, res, next) => {
     .catch((err) => next(err));
 });
 
-RuleTester.post('/login', (req, res, next) => {
+router.post('/login', (req, res, next) => {
   const { email, password } = req.body;
   User.findOne({ email })
     .then((user) => {
