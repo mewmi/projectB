@@ -23,9 +23,10 @@ const SongSinglePage = () => {
       {" "}
       {song && <SongContent song={song} />}
       <div>
-        <Link to={`/quotes/${id}/edit`}>Edit Song</Link>
-        <form onSubmit={handleSongDeleteSubmit}></form>
-        <button>Delete Song</button>
+        <Link to={`/songs/${id}/edit`}>Edit Song</Link>
+        <form onSubmit={handleSongDeleteSubmit}>
+          <button>Delete Song</button>
+        </form>
       </div>
     </div>
   );
