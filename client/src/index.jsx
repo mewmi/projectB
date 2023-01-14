@@ -5,6 +5,8 @@ import App from "./App";
 import { BrowserRouter as Router } from "react-router-dom";
 import { AuthProviderWrapper } from "./context/authentication";
 
+
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
