@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
+import { useAuthContext } from "../context/authentication";
 import { signup } from "../services/authentication";
 
 const SignUp = (props) => {
@@ -7,12 +8,33 @@ const SignUp = (props) => {
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [errorMessage, setErrorMessage] = useState(undefined);
+
   const navigate = useNavigate();
 
   const handleEmailChange = (e) => setEmail(e.target.value);
   const handlePasswordChange = (e) => setPassword(e.target.value);
   const handleNameChange = (e) => setName(e.target.value);
-  const handleFormSubmit = (e) => {};
+
+  const { setUser, setIsLoading, setAuthToken } = useAuthContext();
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+
+    signup(email, password, name)
+      .then((data) => {
+        const { user, authToken } = data;
+        setUser(user);
+        setAuthToken(authToken);
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error);
+        setErrorMessage("Authentication error.");
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+  };
 
   return (
     <div>
@@ -52,6 +74,7 @@ const SignUp = (props) => {
           required
         />
 
+        {errorMessage && <span>{errorMessage}</span>}
         <button>Sign Up</button>
       </form>
     </div>
