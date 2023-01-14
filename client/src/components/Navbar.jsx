@@ -7,24 +7,34 @@ const Navbar = () => {
   const { user } = useAuthContext();
 
   return (
-    <div className="w-full dark:bg-black bg-gray-400">
+    <div className="w-full dark:bg-black bg-gray-400 flex items-center justify-center">
       <ul className="flex flex-col p-4 md:flex-row">
         <li>
-          <img className="mx-auto" src={EchoSmall} alt="echosound" />
+          <img
+            className="mx-auto space-x-4 items-center"
+            src={EchoSmall}
+            alt="echosound"
+          />
         </li>
         <li>
           <Link to="/">
-            <button>HomePage</button>
+            <button className="p-3 rounded-xl bg-white shadow-lg space-x-10 mx-auto text-center sm:text-left">
+              HomePage
+            </button>
           </Link>
         </li>
         <li>
           <Link to="/songs">
-            <button>All Songs</button>
+            <button className="p-3 rounded-xl bg-white shadow-lg">
+              All Songs
+            </button>
           </Link>
         </li>
         <li>
           <Link to="/new-song">
-            <button>Add new Song</button>
+            <button className="p-3 rounded-xl bg-white shadow-lg">
+              Add new Song
+            </button>
           </Link>
         </li>
 
@@ -35,10 +45,19 @@ const Navbar = () => {
         )) || (
           <>
             <li>
-              <Link to="/login">Log In</Link>
+              <Link to="/login">
+                <button className="p-3 rounded-xl bg-white shadow-lg">
+                  Log In
+                </button>
+              </Link>
             </li>
             <li>
-              <Link to="/signup">Sign Up</Link>
+              <Link to="/signup">
+                <button className="p-3 rounded-xl bg-white shadow-lg">
+                  {" "}
+                  Sign Up
+                </button>
+              </Link>
             </li>
           </>
         )}

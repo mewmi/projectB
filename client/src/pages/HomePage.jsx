@@ -3,18 +3,18 @@ import echosound from "../images/echosound.png";
 
 const HomePage = () => {
   return (
-    <div>
-      <p>Welcome to EchoSound</p>
-      <div>
+    <div className="">
+      <p className="flex text-align: center">Welcome to EchoSound</p>
+      <div className="flex items-center justify-center">
         <img src={echosound} alt="echosound" />
       </div>
 
-      <p>variety of music & sound</p>
       <br />
-      <p>
+      <p className=" flex text-align: center">
         <i>The application which provides you with all sorts of sounds</i>
       </p>
-      <p>
+      <br />
+      <p className="flex text-align: center">
         EchoSound is the new music app in which you can find your favourite
         music & podcast. You are able to save you favourites in your own
         summarised playlist, so wherever you go you have your favourite music
@@ -24,8 +24,10 @@ const HomePage = () => {
         click. Create your favorite sample list for quick excess. Enjoy your new
         sounds, which will echo in your ear for a while.{" "}
       </p>
-
-      <p>Signup to use all features of EchoSound</p>
+      <br />
+      <p className=" flex text-align: center">
+        Signup to use all features of EchoSound
+      </p>
     </div>
   );
 };
