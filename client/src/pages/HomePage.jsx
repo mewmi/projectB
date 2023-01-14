@@ -5,6 +5,10 @@ const HomePage = () => {
   return (
     <div>
       <p>Welcome to EchoSound</p>
+      <div>
+        <img src={echosound} alt="echosound" />
+      </div>
+
       <p>variety of music & sound</p>
       <br />
       <p>
@@ -22,7 +26,6 @@ const HomePage = () => {
       </p>
 
       <p>Signup to use all features of EchoSound</p>
-      <img src={echosound} alt="echosound" />
     </div>
   );
 };
