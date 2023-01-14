@@ -1,19 +1,38 @@
 import React, { useState, useEffect, createContext, useContext } from "react";
 import { verify } from "../services/authentication";
 
-const AuthContext = createContext();
+export const AuthContext = createContext();
 
-const AuthProviderWrapper = ({ children }) => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+export const AuthProviderWrapper = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [user, setUser] = useState(null);
+
+  const [authToken, setAuthToken] = useState(
+    window.localStorage.getItem("AUTH_TOKEN")
+  );
+
+  useEffect(() => {
+    window.localStorage.setItem("AUTH_TOKEN", authToken);
+  }, [authToken]);
+
+  useEffect(() => {
+    if (authToken) {
+      verify(authToken).then((data) => {
+        const { user } = data;
+        setUser(user);
+      });
+    }
+  }, [authToken]);
 
   return (
     <AuthContext.Provider
       value={{
-        isLoggedIn,
         isLoading,
         user,
+        setIsLoading,
+        setUser,
+        authToken,
+        setAuthToken,
       }}
     >
       {children}
@@ -21,4 +40,4 @@ const AuthProviderWrapper = ({ children }) => {
   );
 };
 
-export { AuthContext, AuthProviderWrapper };
+export const useAuthContext = () => useContext(AuthContext);
