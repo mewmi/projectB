@@ -1,20 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-import EchoSmall from '../images/EchoSmall.png';
-
+import EchoSmall from "../images/EchoSmall.png";
 import { useAuthContext } from "../context/authentication";
 
-
 const Navbar = () => {
-  return (
+  const { user } = useAuthContext();
 
-    <nav>
-    <div className='w-full dark:bg-black bg-gray-400' >
-      <ul className='flex flex-col p-4 md:flex-row'>
-       <li>
-       <img className="mx-auto" src={EchoSmall} alt="echosound" />
-       </li>
+  return (
     <div className="w-full dark:bg-black bg-gray-400">
       <ul className="flex flex-col p-4 md:flex-row">
         <li>
@@ -35,6 +27,7 @@ const Navbar = () => {
             <button>Add new Song</button>
           </Link>
         </li>
+
         {(user && (
           <li>
             <span>{user.name}</span>
