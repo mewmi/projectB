@@ -23,7 +23,7 @@ const LogIn = (props) => {
         const { user, authToken } = data;
         setUser(user);
         setAuthToken(authToken);
-        navigate("/");
+        navigate("/account");
       })
       .catch((error) => {
         console.log(error);

@@ -8,8 +8,7 @@ import SongEdit from "./pages/SongEdit";
 import Navbar from "./components/Navbar";
 import LogIn from "./pages/LogIn";
 import SignUp from "./pages/SignUp";
-
-
+import AccountPage from "./pages/AccountPage";
 
 const App = () => {
   return (
@@ -23,6 +22,7 @@ const App = () => {
         <Route path="/songs/:id" element={<SongSinglePage />} />
         <Route path="/login" element={<LogIn />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/account" element={<AccountPage />} />
       </Routes>
     </div>
   );
