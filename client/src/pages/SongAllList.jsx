@@ -9,26 +9,21 @@ const SongAllList = () => {
   useEffect(() => {
     songLoadAll().then((data) => setSongs(data.songs));
   }, []);
-
-  /*
-  Runs every time component is rendered
-  useEffect(() => {
-    
-  })
-
-  // First time component is rendered
-  useEffect(() => {
-
-  }, []);
-
-  // First time comp is rendered and everythime modalIsOpen changes
-  useEffect(() => {
-
-  }, [modalIsOpen])
-  */
+  const handleSortButton = () => {
+    const newArray = songs.sort((a, b) => {
+      return a.name.toLowerCase() > b.name.toLowerCase()
+        ? 1
+        : a.name.toLowerCase() < b.name.toLowerCase()
+        ? -1
+        : 0;
+    });
+    console.log(newArray);
+    setSongs([...newArray]);
+  };
 
   return (
     <div>
+      <button onClick={handleSortButton}>Sort by name</button>
       <SongList songs={songs} />
     </div>
   );

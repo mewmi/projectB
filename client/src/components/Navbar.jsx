@@ -16,13 +16,12 @@ const Navbar = () => {
         {user && (
           <>
             <li>
-              <img className=" items-center" src={EchoSmall} alt="echosound" />
-            </li>
-            <li>
               <Link to="/">
-                <button className="p-2 rounded-xl bg-white shadow-lg space-x-10 mx-auto text-center sm:text-left">
-                  HomePage
-                </button>
+                <img
+                  className=" items-center"
+                  src={EchoSmall}
+                  alt="echosound"
+                />
               </Link>
             </li>
 
