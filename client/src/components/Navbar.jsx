@@ -48,12 +48,14 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <button
-                onClick={handleLogout}
-                className="p-2 rounded-xl bg-white shadow-lg"
-              >
-                Logout
-              </button>
+              <Link to="/">
+                <button
+                  onClick={handleLogout}
+                  className="p-2 rounded-xl bg-white shadow-lg"
+                >
+                  Logout
+                </button>
+              </Link>
             </li>
           </>
         )}
