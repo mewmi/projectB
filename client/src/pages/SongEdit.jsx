@@ -8,7 +8,7 @@ const SongEdit = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const handleSongEdit = () => {
-    songEdit(id, song).then(() => navigate(`/songs`));
+    songEdit(id, song).then(() => navigate(`/songs/${id}`));
   };
 
   useEffect(() => {
