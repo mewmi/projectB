@@ -11,76 +11,82 @@ const Navbar = () => {
   };
 
   return (
-    <div className="w-full dark:bg-black bg-gray-400 flex items-center justify-center">
-      <ul className="flex flex-col p-2 md:flex-row">
-        {user && (
-          <>
-            <li>
-              <Link to="/">
-                <img
-                  className=" items-center"
-                  src={EchoSmall}
-                  alt="echosound"
-                />
-              </Link>
-            </li>
+    <nav className="bg-gardient-to-r from-white to-metal">
+      <div className="max-w-md mx-auto dark:bg-black bg-gray-400 flex text-center sm:text-left">
+        <ul className="flex flex-col p-2 md:flex-row">
+          {user && (
+            <>
+              <div className="">
+                <li>
+                  <Link to="/">
+                    <img
+                      className=" text-center sm:text-left"
+                      src={EchoSmall}
+                      alt="echosound"
+                    />
+                  </Link>
+                </li>
 
-            <li>
-              <Link to="/songs">
-                <button className="p-2 rounded-xl bg-white shadow-lg">
-                  All Songs
-                </button>
-              </Link>
-            </li>
-            <li>
-              <Link to="/new-song">
-                <button className="p-2 rounded-xl bg-white shadow-lg">
-                  Add new Song
-                </button>
-              </Link>
-            </li>
+                <li>
+                  <Link to="/songs">
+                    <button className="bg-zinc hover:bg-gray text-white font-bold py-2 px-4 border border-blue-700 rounded">
+                      All Songs
+                    </button>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/new-song">
+                    <button className="bg-zinc hover:bg-gray text-white font-bold py-2 px-4 border border-blue-700 rounded">
+                      Add new Song
+                    </button>
+                  </Link>
+                </li>
 
-            <li>
-              <Link to="/account">
-                <button className="p-2 rounded-xl bg-white shadow-lg">
-                  Your account
-                </button>
-              </Link>
-            </li>
-            <li>
-              <Link to="/">
-                <button
-                  onClick={handleLogout}
-                  className="p-2 rounded-xl bg-white shadow-lg"
-                >
-                  Logout
-                </button>
-              </Link>
-            </li>
-          </>
-        )}
+                <li>
+                  <Link to="/account">
+                    <button className="bg-zinc hover:bg-gray text-white font-bold py-2 px-4 border border-blue-700 rounded">
+                      Your account
+                    </button>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/">
+                    <button
+                      onClick={handleLogout}
+                      className="bg-zinc hover:bg-gray text-white font-bold py-2 px-4 border border-blue-700 rounded"
+                    >
+                      Logout
+                    </button>
+                  </Link>
+                </li>
+              </div>
+            </>
+          )}
 
-        {!user && (
-          <>
-            <li>
-              <Link to="/login">
-                <button className="p-3 rounded-xl bg-white shadow-lg">
-                  Log In
-                </button>
-              </Link>
-            </li>
-            <li>
-              <Link to="/signup">
-                <button className="p-3 rounded-xl bg-white shadow-lg">
-                  {" "}
-                  Sign Up
-                </button>
-              </Link>
-            </li>
-          </>
-        )}
-      </ul>
-    </div>
+          {!user && (
+            <>
+              <div>
+                <li>
+                  <Link to="/login">
+                    <button className="bg-slate hover:bg-gray text-white font-bold py-2 px-4 border border-blue-700 rounded">
+                      Log In
+                    </button>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/signup">
+                    <button className="bg-slate hover:bg-gray text-white font-bold py-2 px-4 border border-blue-700 rounded">
+                      {" "}
+                      Sign Up
+                    </button>
+                  </Link>
+                </li>
+              </div>
+            </>
+          )}
+        </ul>
+      </div>
+    </nav>
   );
 };
 
