@@ -12,6 +12,7 @@ const saltRounds = 10;
 // Post routers
 router.post('/signup', (req, res, next) => {
   const { email, password, name } = req.body;
+  console.log(req.body);
 
   User.findOne({ email })
     .then((user) => {
@@ -55,6 +56,27 @@ router.post('/login', (req, res, next) => {
       }
     })
     .catch((err) => next(err));
+});
+
+router.get('/changeProfile', routeGuard, async (req, res, next) => {
+  const userFound = await User.findById(req.payload._id);
+  console.log(userFound);
+
+  res.status(200).json({ userFound });
+});
+
+router.post('/changeProfile', routeGuard, async (req, res, next) => {
+  const userFound = await User.findById(req.payload._id);
+  const { email, password, name } = req.body;
+  userFound.email = email;
+  const salt = bcrypt.genSaltSync(saltRounds);
+  const hashedPassword = bcrypt.hashSync(password, salt);
+  userFound.password = hashedPassword;
+  userFound.name = name;
+  await userFound.save();
+  console.log(userFound);
+
+  res.status(200).json({ userFound });
 });
 
 // Get routers

@@ -10,6 +10,11 @@ export const signup = (email, password, name) =>
     .post("/authentication/signup", { email, password, name })
     .then((response) => response.data);
 
+export const changeProfile = (email, password, name) =>
+  api
+    .post("/authentication/changeProfile", { email, password, name })
+    .then((response) => response.data);
+
 export const verify = (storedToken) =>
   api
     .get("/authentication/verify", {
