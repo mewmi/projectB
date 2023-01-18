@@ -11,50 +11,37 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gardient-to-r from-white to-metal">
-      <div className="max-w-md mx-auto dark:bg-black bg-gray-400 flex text-center sm:text-left">
-        <ul className="flex flex-col p-2 md:flex-row">
+    <nav className="">
+      <div className="">
+        <ul className="">
           {user && (
             <>
               <div className="">
                 <li>
                   <Link to="/">
-                    <img
-                      className=" text-center sm:text-left"
-                      src={EchoSmall}
-                      alt="echosound"
-                    />
+                    <img className="" src={EchoSmall} alt="echosound" />
                   </Link>
                 </li>
 
                 <li>
                   <Link to="/songs">
-                    <button className="bg-zinc hover:bg-gray text-white font-bold py-2 px-4 border border-blue-700 rounded">
-                      All Songs
-                    </button>
+                    <button className="">All Songs</button>
                   </Link>
                 </li>
                 <li>
                   <Link to="/new-song">
-                    <button className="bg-zinc hover:bg-gray text-white font-bold py-2 px-4 border border-blue-700 rounded">
-                      Add new Song
-                    </button>
+                    <button className="">Add new Song</button>
                   </Link>
                 </li>
 
                 <li>
                   <Link to="/account">
-                    <button className="bg-zinc hover:bg-gray text-white font-bold py-2 px-4 border border-blue-700 rounded">
-                      Your account
-                    </button>
+                    <button className="">Your account</button>
                   </Link>
                 </li>
                 <li>
                   <Link to="/">
-                    <button
-                      onClick={handleLogout}
-                      className="bg-zinc hover:bg-gray text-white font-bold py-2 px-4 border border-blue-700 rounded"
-                    >
+                    <button onClick={handleLogout} className="">
                       Logout
                     </button>
                   </Link>
@@ -68,17 +55,12 @@ const Navbar = () => {
               <div>
                 <li>
                   <Link to="/login">
-                    <button className="bg-slate hover:bg-gray text-white font-bold py-2 px-4 border border-blue-700 rounded">
-                      Log In
-                    </button>
+                    <button className="">Log In</button>
                   </Link>
                 </li>
                 <li>
                   <Link to="/signup">
-                    <button className="bg-slate hover:bg-gray text-white font-bold py-2 px-4 border border-blue-700 rounded">
-                      {" "}
-                      Sign Up
-                    </button>
+                    <button className=""> Sign Up</button>
                   </Link>
                 </li>
               </div>
