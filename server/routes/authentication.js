@@ -80,6 +80,12 @@ router.post('/changeProfile', routeGuard, async (req, res, next) => {
   res.status(200).json({ userFound });
 });
 
+router.delete('/deleteProfile', routeGuard, async (req, res, next) => {
+  const userFound = await User.findByIdAndDelete(req.payload._id);
+
+  res.status(200).json({ message: 'User deleted' });
+});
+
 // Get routers
 
 router.get('/verify', routeGuard, (req, res, next) => {
