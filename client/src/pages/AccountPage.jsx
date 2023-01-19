@@ -23,7 +23,9 @@ const AccountPage = () => {
     <div>
       {user && (
         <>
-          <div className="text-center">Welcome {user.name}</div>
+          <div className="text-center">
+            Welcome {user.name.charAt(0).toUpperCase() + user.name.slice(1)}
+          </div>
           <br />
         </>
       )}
