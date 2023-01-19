@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import EchoSmall from "../images/EchoSmall.png";
 import { useAuthContext } from "../context/authentication";
+import Button from "@mui/material/Button";
+import { Container } from "@mui/system";
 
 const Navbar = () => {
   const { user, setUser, setAuthToken } = useAuthContext();
@@ -11,64 +13,54 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="">
-      <div className="">
-        <ul className="">
-          {user && (
-            <>
-              <div className="">
-                <li>
-                  <Link to="/">
-                    <img className="" src={EchoSmall} alt="echosound" />
-                  </Link>
-                </li>
+    <Container maxWidth="xl" sx={{ background: "#fff" }}>
+      {user && (
+        <>
+          <Link to="/">
+            <img src={EchoSmall} alt="echosmall" className="echosmall" />
+          </Link>
 
-                <li>
-                  <Link to="/songs">
-                    <button className="">All Songs</button>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/new-song">
-                    <button className="">Add new Song</button>
-                  </Link>
-                </li>
+          <Link to="/songs">
+            <Button
+              variant="contained"
+              color="secondary"
+              size="small"
+              style={{ fontSize: 8 }}
+            >
+              All Songs
+            </Button>
+          </Link>
 
-                <li>
-                  <Link to="/account">
-                    <button className="">Your account</button>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    <button onClick={handleLogout} className="">
-                      Logout
-                    </button>
-                  </Link>
-                </li>
-              </div>
-            </>
-          )}
+          <Link to="/new-song">
+            <Button className="">Add new Song</Button>
+          </Link>
 
-          {!user && (
-            <>
-              <div>
-                <li>
-                  <Link to="/login">
-                    <button className="">Log In</button>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/signup">
-                    <button className=""> Sign Up</button>
-                  </Link>
-                </li>
-              </div>
-            </>
-          )}
-        </ul>
-      </div>
-    </nav>
+          <Link to="/account">
+            <Button className="">Your account</Button>
+          </Link>
+
+          <Link to="/">
+            <Button onClick={handleLogout} className="">
+              Logout
+            </Button>
+          </Link>
+        </>
+      )}
+
+      {!user && (
+        <>
+          <div>
+            <Link to="/login">
+              <Button className="">Log In</Button>
+            </Link>
+
+            <Link to="/signup">
+              <Button className=""> Sign Up</Button>
+            </Link>
+          </div>
+        </>
+      )}
+    </Container>
   );
 };
 
