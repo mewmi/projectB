@@ -66,6 +66,7 @@ router.get('/changeProfile', routeGuard, async (req, res, next) => {
 });
 
 router.post('/changeProfile', routeGuard, async (req, res, next) => {
+  console.log(req.payload);
   const userFound = await User.findById(req.payload._id);
   const { email, password, name } = req.body;
   userFound.email = email;
