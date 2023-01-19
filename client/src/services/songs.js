@@ -6,11 +6,23 @@ export const songLoadSingle = (id) =>
 export const songLoadAll = () =>
   api.get(`/songs`).then((response) => response.data);
 
-export const songAdd = (song) =>
-  api.post(`/songs`, song).then((response) => response.data);
+export const songAdd = (song, storedToken) =>
+  api
+    .post(`/songs`, song, {
+      headers: { Authorization: `Bearer ${storedToken}` },
+    })
+    .then((response) => response.data);
 
-export const songEdit = (id, song) =>
-  api.patch(`/songs/${id}`, song).then((response) => response.data);
+export const songEdit = (id, song, storedToken) =>
+  api
+    .patch(`/songs/${id}`, song, {
+      headers: { Authorization: `Bearer ${storedToken}` },
+    })
+    .then((response) => response.data);
 
-export const songDelete = (id) =>
-  api.delete(`/songs/${id}`).then((response) => response.data);
+export const songDelete = (id, storedToken) =>
+  api
+    .delete(`/songs/${id}`, {
+      headers: { Authorization: `Bearer ${storedToken}` },
+    })
+    .then((response) => response.data);

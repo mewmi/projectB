@@ -10,6 +10,7 @@ import LogIn from "./pages/LogIn";
 import SignUp from "./pages/SignUp";
 import AccountPage from "./pages/AccountPage";
 import { ChangeProfile } from "./pages/ChangeProfile";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
         <Route path="/account" element={<AccountPage />} />
         <Route path="/changeProfile" element={<ChangeProfile />} />
       </Routes>
+      <Footer />
     </div>
   );
 };
