@@ -44,10 +44,6 @@
     list-style: none;
   }
 
-  .footer {
-    background: rgb(115, 134, 145);
-  }
-
   /*   Homepage */
   .welcome {
     text-align: center;
@@ -64,12 +60,6 @@
   .introText {
     font-size: 12px;
     text-align: justify;
-  }
-
-  Footer {
-    color: white;
-    position: absolute;
-    bottom: 0;
   }
 
   /* AccountPage */
@@ -184,10 +174,17 @@
     background-color: black;
     color: azure;
   }
-  .navbarLinks {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    list-style: none;
-  }
+}
+
+/* _________________________
+FOR ALL SIZES */
+
+Footer {
+  color: white;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 0;
+}
+.footer {
+  background: rgb(115, 134, 145);
 }
