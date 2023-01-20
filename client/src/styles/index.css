@@ -83,6 +83,8 @@
     padding-bottom: 30px;
   }
 
+  /* animated Buttons */
+
   .button-86 {
     all: unset;
     width: 100px;
@@ -150,6 +152,23 @@
     transform: translate(0, 5%);
   }
 }
+
+/* All Songs Video */
+
+.videoResponsive {
+  position: relative;
+  width: 100%;
+}
+.videoResponsive iframe {
+  /*  position: absolute; */
+  /*     margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ */
+}
+
+/* ---------------------------- */
 
 /* tablet  */
 @media (min-width: 961px) {

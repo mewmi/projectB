@@ -1,7 +1,7 @@
 import React from "react";
 
 const YoutubeEmbed = ({ embedId }) => (
-  <div className="video-responsive">
+  <div className="videoResponsive">
     <iframe
       width="853"
       height="480"
@@ -10,11 +10,11 @@ const YoutubeEmbed = ({ embedId }) => (
       allowFullScreen
       title="Embedded youtube"
       style={{
+        width: "auto",
+        /*  minWidth: "500px" */ /* , */ height: "auto",
         display: "flex",
         justifyContent: "center",
         marginTop: "20px",
-        maxHeight: "200px",
-        maxWidth: "300px",
       }}
     />
   </div>
