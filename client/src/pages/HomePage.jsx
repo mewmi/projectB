@@ -7,17 +7,22 @@ const HomePage = () => {
   return (
     <Container>
       <div className="">
-        <p className="flex text-align: center">Welcome to EchoSound</p>
+        <p
+          className="welcome"
+          style={{ fontFamily: "Aldrich", fontWeight: "bold" }}
+        >
+          Welcome to EchoSound
+        </p>
         <div className="flex items-center justify-center">
           <img src={Soundwaves} alt="echosound" className="echosound" />
         </div>
 
         <br />
-        <p className=" flex text-align: center">
+        <p className="">
           <i>The application which provides you with all sorts of sounds</i>
         </p>
         <br />
-        <p className="flex text-align: center">
+        <p className="introText">
           EchoSound is the new music app in which you can find your favourite
           music & podcast. You are able to save you favourites in your own
           summarised playlist, so wherever you go you have your favourite music
@@ -26,10 +31,6 @@ const HomePage = () => {
           to use. You can download samples and create your own samples, with
           only one click. Create your favorite sample list for quick excess.
           Enjoy your new sounds, which will echo in your ear for a while.{" "}
-        </p>
-        <br />
-        <p className=" flex text-align: center">
-          Signup to use all features of EchoSound
         </p>
       </div>
     </Container>

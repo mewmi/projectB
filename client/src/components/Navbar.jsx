@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import EchoSmall from "../images/EchoSmall.png";
+import EchoSmall from "../images/EchoSoundSmall.png";
 import { useAuthContext } from "../context/authentication";
 import Button from "@mui/material/Button";
 import { Container } from "@mui/system";
@@ -14,61 +14,68 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div>
-        {/* <Container> */}
-        {user && (
-          <>
-            <Link to="/">
-              <img src={EchoSmall} alt="echosmall" className="echosmall" />
-            </Link>
-            <div className="navbarLinks">
-              <li>
-                <Link to="/songs">
-                  <Button /* variant="contained" size="small" style={{ fontSize: 8 }} */
-                  >
-                    All Songs
-                  </Button>
-                </Link>
-              </li>
-              <li>
-                <Link to="/new-song">
-                  <Button className="">Add new Song</Button>
-                </Link>
-              </li>
-              <li>
-                <Link to="/account">
-                  <Button className="">Your account</Button>
-                </Link>
-              </li>
-              <li>
-                <Link to="/">
-                  <Button onClick={handleLogout} className="">
-                    Logout
-                  </Button>
-                </Link>
-              </li>
-            </div>
-          </>
-        )}
+      {/*  <Container> */}
+      {user && (
+        <>
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <img src={EchoSmall} alt="echosmall" className="echosmall" />
+          </Link>
+          <div className="navbarLinks">
+            <li>
+              <Link to="/songs" style={{ textDecoration: "none" }}>
+                <Button style={{ color: "white", fontFamily: "Aldrich" }}>
+                  All Songs
+                </Button>
+              </Link>
+            </li>
+            <li>
+              <Link to="/new-song" style={{ textDecoration: "none" }}>
+                <Button style={{ color: "white", fontFamily: "Aldrich" }}>
+                  Add new Song
+                </Button>
+              </Link>
+            </li>
+            <li>
+              <Link to="/account" style={{ textDecoration: "none" }}>
+                <Button style={{ color: "white", fontFamily: "Aldrich" }}>
+                  Your account
+                </Button>
+              </Link>
+            </li>
+            <li>
+              <Link to="/" style={{ textDecoration: "none" }}>
+                <Button
+                  onClick={handleLogout}
+                  style={{ color: "white", fontFamily: "Aldrich" }}
+                >
+                  Logout
+                </Button>
+              </Link>
+            </li>
+          </div>
+        </>
+      )}
 
-        {!user && (
-          <>
-            <div>
-              <li>
-                <Link to="/login">
-                  <Button className="">Log In</Button>
-                </Link>
-              </li>
-              <li>
-                <Link to="/signup">
-                  <Button className=""> Sign Up</Button>
-                </Link>
-              </li>
-            </div>
-          </>
-        )}
-        {/*  </Container> */}
-      </div>
+      {!user && (
+        <>
+          <li>
+            <Link to="/login" style={{ textDecoration: "none" }}>
+              <Button style={{ color: "white", fontFamily: "Aldrich" }}>
+                Log In
+              </Button>
+            </Link>
+          </li>
+          <li>
+            <Link to="/signup" style={{ textDecoration: "none" }}>
+              <Button style={{ color: "white", fontFamily: "Aldrich" }}>
+                {" "}
+                Sign Up
+              </Button>
+            </Link>
+          </li>
+        </>
+      )}
+      {/*  </Container> */}
     </nav>
   );
 };
