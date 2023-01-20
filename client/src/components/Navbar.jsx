@@ -13,54 +13,63 @@ const Navbar = () => {
   };
 
   return (
-    <Container maxWidth="xl" sx={{ background: "#fff" }}>
-      {user && (
-        <>
-          <Link to="/">
-            <img src={EchoSmall} alt="echosmall" className="echosmall" />
-          </Link>
-
-          <Link to="/songs">
-            <Button
-              variant="contained"
-              color="secondary"
-              size="small"
-              style={{ fontSize: 8 }}
-            >
-              All Songs
-            </Button>
-          </Link>
-
-          <Link to="/new-song">
-            <Button className="">Add new Song</Button>
-          </Link>
-
-          <Link to="/account">
-            <Button className="">Your account</Button>
-          </Link>
-
-          <Link to="/">
-            <Button onClick={handleLogout} className="">
-              Logout
-            </Button>
-          </Link>
-        </>
-      )}
-
-      {!user && (
-        <>
-          <div>
-            <Link to="/login">
-              <Button className="">Log In</Button>
+    <nav className="navbar">
+      <div>
+        {/* <Container> */}
+        {user && (
+          <>
+            <Link to="/">
+              <img src={EchoSmall} alt="echosmall" className="echosmall" />
             </Link>
+            <div className="navbarLinks">
+              <li>
+                <Link to="/songs">
+                  <Button /* variant="contained" size="small" style={{ fontSize: 8 }} */
+                  >
+                    All Songs
+                  </Button>
+                </Link>
+              </li>
+              <li>
+                <Link to="/new-song">
+                  <Button className="">Add new Song</Button>
+                </Link>
+              </li>
+              <li>
+                <Link to="/account">
+                  <Button className="">Your account</Button>
+                </Link>
+              </li>
+              <li>
+                <Link to="/">
+                  <Button onClick={handleLogout} className="">
+                    Logout
+                  </Button>
+                </Link>
+              </li>
+            </div>
+          </>
+        )}
 
-            <Link to="/signup">
-              <Button className=""> Sign Up</Button>
-            </Link>
-          </div>
-        </>
-      )}
-    </Container>
+        {!user && (
+          <>
+            <div>
+              <li>
+                <Link to="/login">
+                  <Button className="">Log In</Button>
+                </Link>
+              </li>
+              <li>
+                <Link to="/signup">
+                  <Button className=""> Sign Up</Button>
+                </Link>
+              </li>
+            </div>
+          </>
+        )}
+        {/*  </Container> */}
+      </div>
+    </nav>
   );
 };
 
