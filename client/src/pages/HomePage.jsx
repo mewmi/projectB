@@ -16,12 +16,11 @@ const HomePage = () => {
       <br />
       <p className="flex text-align: center">
         EchoSound is the new music app in which you can find your favourite
-        music & podcast. You are able to save you favourites in your own
+        music & podcast. You are able to save your favourites in your own
         summarised playlist, so wherever you go you have your favourite music
         with you. In addition we opened a sample bank, for those who work in the
         field of sound this is the optimal way of finding quick new sounds to
-        use. You can download samples and create your own samples, with only one
-        click. Create your favorite sample list for quick excess. Enjoy your new
+        use. Create your favorite sample list for quick excess. Enjoy your new
         sounds, which will echo in your ear for a while.{" "}
       </p>
       <br />
