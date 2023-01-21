@@ -38,6 +38,14 @@ const SignUp = (props) => {
 
   return (
     <div className="float-child-two">
+      <h1>Create your personal EchoSound space!</h1>
+      <p>
+        As soon as you sign-up, you will be able to upload your favourite songs,
+        edit them and create your EchoSound space.
+      </p>
+      <h5>
+        Your password should have a minimum of 8 charachter (letters & digits)
+      </h5>
       <form onSubmit={handleFormSubmit} className="float-child-one">
         <label htmlFor="email" className="inputForm">
           Email
