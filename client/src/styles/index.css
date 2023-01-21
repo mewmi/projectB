@@ -344,3 +344,11 @@ Footer {
 .shortText {
   font-size: 23px;
 }
+
+/* Account Page Buttons */
+
+#profileChange {
+  margin-right: 40px;
+  margin-left: -100px;
+  text-decoration: none;
+}

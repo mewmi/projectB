@@ -25,7 +25,11 @@ const SongSinglePage = () => {
       <div className="button-group">
         <button
           className="button-87"
-          style={{ maxHeight: "10px", alignItems: "center" }}
+          style={{
+            maxHeight: "30px",
+            alignItems: "center",
+            marginTop: "-60px",
+          }}
         >
           <Link
             to={`/songs/${id}/edit`}
