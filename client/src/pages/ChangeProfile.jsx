@@ -35,34 +35,48 @@ export function ChangeProfile() {
   };
 
   return (
-    <div>
+    <div className="float-child-two">
       {user && user.name.charAt(0).toUpperCase() + user.name.slice(1)}
-      <form onSubmit={handleSubmit}>
-        <label>Name</label>
+      <form onSubmit={handleSubmit} className="float-child-one">
+        <label className="inputForm">Name</label>
         <input
           type="text"
           name="name"
           value={formData.name || ""}
           onChange={handleChange}
+          className="inputForm"
         />
 
-        <label>Email</label>
+        <label className="inputForm">Email</label>
         <input
           type="email"
           name="email"
           value={formData.email || ""}
           onChange={handleChange}
+          className="inputForm"
         />
 
-        <label>Password</label>
+        <label className="inputForm">Password</label>
         <input
           type="password"
           name="password"
           value={formData.password || ""}
           onChange={handleChange}
+          className="inputForm"
         />
-
-        <button type="submit">Submit</button>
+        <div id="submit-button">
+          <button
+            type="submit"
+            className="button-86"
+            style={{
+              maxHeight: "12px",
+              maxWidth: "60px",
+              textAlign: "right",
+            }}
+          >
+            Submit
+          </button>
+        </div>
       </form>
     </div>
   );

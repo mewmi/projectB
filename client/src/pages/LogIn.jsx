@@ -35,9 +35,11 @@ const LogIn = (props) => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleFormSubmit}>
-        <label htmlFor="email">Email</label>
+    <div className="float-child-two">
+      <form onSubmit={handleFormSubmit} className="float-child-one">
+        <label htmlFor="email" className="inputForm">
+          Email
+        </label>
         <input
           id="email"
           type="text"
@@ -46,9 +48,12 @@ const LogIn = (props) => {
           value={email}
           onChange={handleEmailChange}
           required
+          className="inputForm"
         />
 
-        <label htmlFor="password">Password</label>
+        <label htmlFor="password" className="inputForm">
+          Password
+        </label>
         <input
           id="password"
           type="password"
@@ -59,9 +64,21 @@ const LogIn = (props) => {
           value={password}
           onChange={handlePasswordChange}
           pattern="(?=.*\d)(?=.*[a-zA-Z]).*"
+          className="inputForm"
         />
         {errorMessage && <span>{errorMessage}</span>}
-        <button>Log In</button>
+        <div id="submit-button">
+          <button
+            className="button-86"
+            style={{
+              maxHeight: "12px",
+              maxWidth: "60px",
+              textAlign: "right",
+            }}
+          >
+            Log In
+          </button>
+        </div>
       </form>
     </div>
   );

@@ -17,7 +17,7 @@ const SongContent = ({ song }) => {
           fontFamily: "Aldrich",
         }}
       >
-        {name}
+        Song Name: {name}
       </h1>
       <a
         href={link}

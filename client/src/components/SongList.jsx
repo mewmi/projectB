@@ -4,7 +4,7 @@ import YoutubeEmbed from "./YoutubeEmbed";
 
 const SongList = ({ songs }) => {
   return (
-    <div className="float-child-two">
+    <div className="songList">
       {songs.map((eachSong) => {
         return <SongListItem key={eachSong._id} eachSong={eachSong} />;
       })}
@@ -16,9 +16,9 @@ const SongListItem = ({ eachSong }) => {
   const regex = /.*v=/gm;
   const embedLink = eachSong.link.replace(regex, "");
   return (
-    <div className="float-child-two">
+    <div className="songList">
       <YoutubeEmbed embedId={embedLink} />
-      <Link className="float-child-two" to={`/songs/${eachSong._id}`}>
+      <Link className="songList" to={`/songs/${eachSong._id}`}>
         <h3
           style={{
             fontSize: "20px",

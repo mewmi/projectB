@@ -22,19 +22,24 @@ const SongSinglePage = () => {
     <div className="float-child-two">
       {" "}
       {song && <SongContent song={song} />}
-      <div>
-        <Link
-          to={`/songs/${id}/edit`}
-          style={{
-            fontSize: "20px",
-            margin: "10px",
-            fontFamily: "Aldrich",
-            color: "black",
-            textDecoration: "none",
-          }}
+      <div className="button-group">
+        <button
+          className="button-87"
+          style={{ maxHeight: "10px", alignItems: "center" }}
         >
-          Edit Song
-        </Link>
+          <Link
+            to={`/songs/${id}/edit`}
+            style={{
+              fontSize: "20px",
+              margin: "10px",
+              fontFamily: "Aldrich",
+              color: "black",
+              textDecoration: "none",
+            }}
+          >
+            Edit Song
+          </Link>
+        </button>
         <form onSubmit={handleSongDeleteSubmit}>
           <button
             className="button-86"
