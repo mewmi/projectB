@@ -39,10 +39,11 @@ const SongAllList = () => {
         onClick={handleSortButton}
         className="button-86"
         style={{
-          position: "absolute",
-          margin: "20px",
-          maxHeight: "10px",
-          maxWidth: "50px",
+          fontSize: "20px",
+          margin: "10px",
+          fontFamily: "Aldrich",
+          color: "black",
+          textDecoration: "none",
         }}
       >
         Sort by {isSortedByName ? "name" : "date"}
