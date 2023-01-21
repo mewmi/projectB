@@ -17,41 +17,45 @@ const Navbar = () => {
       {/*  <Container> */}
       {user && (
         <>
-          <Link to="/" style={{ textDecoration: "none" }}>
-            <img src={EchoSmall} alt="echosmall" className="echosmall" />
-          </Link>
+          <li className="navList">
+            <Link to="/" style={{ textDecoration: "none" }}>
+              <img src={EchoSmall} alt="echosmall" className="echosmall" />
+            </Link>
+          </li>
           <div className="navbarLinks">
-            <li>
-              <Link to="/songs" style={{ textDecoration: "none" }}>
-                <Button style={{ color: "white", fontFamily: "Aldrich" }}>
-                  All Songs
-                </Button>
-              </Link>
-            </li>
-            <li>
-              <Link to="/new-song" style={{ textDecoration: "none" }}>
-                <Button style={{ color: "white", fontFamily: "Aldrich" }}>
-                  Add new Song
-                </Button>
-              </Link>
-            </li>
-            <li>
-              <Link to="/account" style={{ textDecoration: "none" }}>
-                <Button style={{ color: "white", fontFamily: "Aldrich" }}>
-                  Your account
-                </Button>
-              </Link>
-            </li>
-            <li>
-              <Link to="/" style={{ textDecoration: "none" }}>
-                <Button
-                  onClick={handleLogout}
-                  style={{ color: "white", fontFamily: "Aldrich" }}
-                >
-                  Logout
-                </Button>
-              </Link>
-            </li>
+            <ul>
+              <li className="navList">
+                <Link to="/songs" style={{ textDecoration: "none" }}>
+                  <Button style={{ color: "white", fontFamily: "Aldrich" }}>
+                    All Songs
+                  </Button>
+                </Link>
+              </li>
+              <li className="navList">
+                <Link to="/new-song" style={{ textDecoration: "none" }}>
+                  <Button style={{ color: "white", fontFamily: "Aldrich" }}>
+                    Add new Song
+                  </Button>
+                </Link>
+              </li>
+              <li className="navList">
+                <Link to="/account" style={{ textDecoration: "none" }}>
+                  <Button style={{ color: "white", fontFamily: "Aldrich" }}>
+                    Your account
+                  </Button>
+                </Link>
+              </li>
+              <li className="navList">
+                <Link to="/" style={{ textDecoration: "none" }}>
+                  <Button
+                    onClick={handleLogout}
+                    style={{ color: "white", fontFamily: "Aldrich" }}
+                  >
+                    Logout
+                  </Button>
+                </Link>
+              </li>
+            </ul>
           </div>
         </>
       )}
