@@ -36,12 +36,9 @@ const HomePage = () => {
           <p className="introText">
             EchoSound is the new music app in which you can find your favourite
             music & podcast. You are able to upload your favourites and listen
-            to them directly throught Echosound, so wherever you go you have
-            your favourite music with you. In addition we opened a sample bank,
-            for those who work in the field of sound this is the optimal way of
-            finding quick new sounds to use. Create your favorite sample list
-            for quick excess. Enjoy your new sounds, which will echo in your ear
-            for a while.{" "}
+            to them directly through Echosound, so wherever you go you have your
+            favourite music with you. Enjoy your new sounds, which will echo in
+            your ear for a while.{" "}
           </p>
         </div>
         <div class="float-child-two">

@@ -351,7 +351,7 @@ Footer {
 /* Account Page Buttons */
 
 #profileChange {
-  margin-right: 40px;
-  margin-left: -100px;
+  margin-right: -90px;
+  margin-left: 0px;
   text-decoration: none;
 }
