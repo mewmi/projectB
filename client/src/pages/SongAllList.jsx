@@ -10,6 +10,7 @@ const SongAllList = () => {
   useEffect(() => {
     songLoadAll().then((data) => setSongs(data.songs));
   }, []);
+
   const handleSortButton = () => {
     isSortedByName ? sortByName() : sortByDate();
     setIsSortedByName(!isSortedByName);
@@ -34,7 +35,7 @@ const SongAllList = () => {
   };
 
   return (
-    <div>
+    <div class="float-child-two">
       <button
         onClick={handleSortButton}
         className="button-86"

@@ -11,8 +11,10 @@ body {
     rgb(31, 83, 113) 55%
   );
   font-family: Optima;
-  margin: 10px;
+  min-height: 100vh;
+  margin: 0;
 }
+
 @media (min-width: 320px) {
   /*  Logo */
   img.echosmall {
@@ -33,15 +35,21 @@ body {
   .navbar {
     background: rgb(115, 134, 145);
   }
-
-  nav {
-    top: 0;
+  nav,
+  nav ul {
     display: flex;
-    justify-content: "space-evenly";
-    align-items: center;
+    flex-direction: row;
     list-style: none;
-    text-align: center;
+    /* justify-content: "space-evenly";
+    align-items: center;
+    list-style: none; */
+    /* text-align: center; */
     margin: auto;
+  }
+  .navList {
+    padding: 5px;
+    /* display: grid; */
+    /*    grid-template-columns: 180px 180px 180px; */
   }
 
   /*   Homepage */
@@ -179,18 +187,71 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
+
+  .navbar {
+    background: rgb(115, 134, 145);
+  }
+
+  nav {
+    top: 0;
+    /*   display: flex; */
+    /* justify-content: "space-evenly"; */
+    /*  align-items: center; */
+    /*     list-style: none;
+    text-align: center; */
+    /*     margin: auto; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .navList {
+    /*     padding: 5px;
+    display: grid; */
+
+    /*    grid-template-columns: 180px 180px 180px; */
+  }
+
+  .inputForm {
+    font-size: 30px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    border-radius: 5px;
+    align-items: center;
+  }
 }
 
 /* _________________________
 FOR ALL SIZES */
-
+/* 
 Footer {
   color: white;
   position: fixed;
   bottom: 0;
-}
+} */
 .footer {
+  margin-top: auto;
   background: rgb(115, 134, 145);
+}
+
+.float-child-one {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2em;
+  height: 60vh;
+}
+
+#submit-button {
+}
+
+.button-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2em;
+  margin: auto 10em;
 }
 
 .footerWords {

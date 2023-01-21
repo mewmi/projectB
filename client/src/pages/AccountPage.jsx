@@ -39,60 +39,34 @@ const AccountPage = () => {
       </div>
       <img src={echosound} alt="echosound" className="logo" />
       {deleteConfirm ? (
-        <>
+        <div className="button-group">
           <Link to="/changeProfile">
-            <button
-              style={{
-                position: "absolute",
-                margin: "10px",
-                marginLeft: "70px",
-                left: "0",
-                backgroundColor: "rgb(148, 174, 189)",
-              }}
-              className="button-86"
-            >
+            <button style={{}} className="button-86">
               Change profile
             </button>
           </Link>
           <button
             onClick={handleDeleteConfirmation}
-            style={{
-              position: "absolute",
-              margin: "10px",
-              marginRight: "70px",
-              right: "0",
-              backgroundColor: "rgb(148, 174, 189)",
-            }}
+            style={{}}
             className="button-86"
           >
             Delete profile
           </button>
-        </>
+        </div>
       ) : (
-        <div className="">
+        <div className="button-group">
           <p style={{ margin: "5px", marginLeft: "15px" }}>Are you sure?</p>
           <button
             onClick={handleDeleteProfile}
             className="button-86"
-            style={{
-              position: "absolute",
-              margin: "5px",
-              maxHeight: "5px",
-              maxWidth: "10px",
-            }}
+            style={{}}
           >
             Yes
           </button>
           <button
             onClick={handleDeleteConfirmation}
             className="button-86"
-            style={{
-              position: "absolute",
-              margin: "5px",
-              maxHeight: "5px",
-              maxWidth: "10px",
-              marginLeft: "70px",
-            }}
+            style={{}}
           >
             {" "}
             No
