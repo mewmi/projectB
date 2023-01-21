@@ -18,7 +18,7 @@ const HomePage = () => {
   return (
     <Container>
       <div class="float-container">
-        <div class="float-child-one">
+        <div class="">
           <p
             className="welcome"
             style={{ fontFamily: "Aldrich", fontWeight: "bold" }}

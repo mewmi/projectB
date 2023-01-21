@@ -70,7 +70,7 @@ body {
   }
 
   .introText {
-    font-size: 17px;
+    font-size: 19px;
     text-align: justify;
   }
 
@@ -259,5 +259,5 @@ Footer {
 }
 
 .shortText {
-  font-size: 17px;
+  font-size: 23px;
 }
