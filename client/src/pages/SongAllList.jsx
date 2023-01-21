@@ -34,7 +34,7 @@ const SongAllList = () => {
   };
 
   return (
-    <div>
+    <div class="float-child-two">
       <button
         onClick={handleSortButton}
         className="button-86"
