@@ -38,7 +38,7 @@ const SongContent = ({ song }) => {
           fontFamily: "Aldrich",
         }}
       >
-        Song author: {author}
+        Song artist: {author}
       </h1>
     </div>
   );

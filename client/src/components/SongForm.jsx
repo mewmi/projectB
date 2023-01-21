@@ -41,7 +41,7 @@ const SongForm = ({ song, onSongChange, onSongSubmit }) => {
           value={song.link}
         />
         <label htmlFor="author" className="inputForm">
-          Post author
+          Artist
         </label>
         <input
           className="inputForm"
