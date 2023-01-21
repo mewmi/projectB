@@ -51,6 +51,10 @@
     font-size: 20px;
   }
 
+  .float-child-two {
+    text-align: center;
+  }
+
   /* Homepage Img */
   img.echosound {
     max-width: 100%;
@@ -173,6 +177,23 @@
     align-items: center;
     background-color: black;
     color: azure;
+  }
+
+  .float-container {
+    padding: 20px;
+  }
+
+  .float-child-one {
+    width: 80%;
+    float: left;
+    padding: 20px;
+  }
+
+  .float-child-two {
+    width: 20%;
+    float: left;
+    padding: 20px;
+    padding-top: 6%;
   }
 }
 
