@@ -56,14 +56,14 @@ const SongForm = ({ song, onSongChange, onSongSubmit }) => {
           }
           value={song.author}
         />
-        <div id="submit-button">
+        <div id="button-id">
           <button
             className="button-86"
-            style={{
+            /*  style={{
               maxHeight: "12px",
               maxWidth: "60px",
               textAlign: "right",
-            }}
+            }} */
           >
             Submit Song
           </button>

@@ -41,7 +41,7 @@ const AccountPage = () => {
       {deleteConfirm ? (
         <div className="button-group">
           <Link to="/changeProfile">
-            <button style={{}} className="button-86">
+            <button style={{}} className="button-86" id="profileChange">
               Change profile
             </button>
           </Link>
@@ -49,6 +49,7 @@ const AccountPage = () => {
             onClick={handleDeleteConfirmation}
             style={{}}
             className="button-86"
+            id="profileDelete"
           >
             Delete profile
           </button>

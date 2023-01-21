@@ -313,13 +313,31 @@ Footer {
   height: 60vh;
 }
 
+#button-id {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+  margin: auto 1em;
+  margin-bottom: 220px;
+}
+
 .button-group {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   padding: 2em;
-  margin: auto 10em;
+  margin: auto 40em;
+}
+
+#delete-button {
+  margin-left: auto;
+  margin-right: auto;
+  border: 5px;
+  margin-top: 10px;
+  font-family: Aldrich;
 }
 
 .footerWords {
@@ -328,4 +346,12 @@ Footer {
 
 .shortText {
   font-size: 23px;
+}
+
+/* Account Page Buttons */
+
+#profileChange {
+  margin-right: 40px;
+  margin-left: -100px;
+  text-decoration: none;
 }

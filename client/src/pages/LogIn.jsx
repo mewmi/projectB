@@ -45,6 +45,7 @@ const LogIn = (props) => {
         <label htmlFor="email" className="inputForm">
           Email
         </label>
+
         <input
           id="email"
           type="text"
@@ -72,18 +73,7 @@ const LogIn = (props) => {
           className="inputForm"
         />
         {errorMessage && <span>{errorMessage}</span>}
-        <div id="submit-button">
-          <button
-            className="button-86"
-            style={{
-              maxHeight: "12px",
-              maxWidth: "60px",
-              textAlign: "right",
-            }}
-          >
-            Log-In
-          </button>
-        </div>
+        <button className="button-86">Log In</button>
       </form>
     </div>
   );
