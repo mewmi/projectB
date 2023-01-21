@@ -11,7 +11,16 @@ const schema = new mongoose.Schema(
     },
     link: { type: String, required: true },
     image: { type: String },
-    author: { type: String, required: true }
+    author: {
+      type: String,
+      trim: true,
+      required: true
+    }
+    // author: {
+    //   type: mongoose.Schema.Types.ObjectId,
+    //   required: true,
+    //   ref: 'User'
+    // }
   },
   { timestamps: { createdAt: 'created_at' } }
 );

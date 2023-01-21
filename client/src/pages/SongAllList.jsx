@@ -35,7 +35,16 @@ const SongAllList = () => {
 
   return (
     <div>
-      <button onClick={handleSortButton}>
+      <button
+        onClick={handleSortButton}
+        className="button-86"
+        style={{
+          position: "absolute",
+          margin: "20px",
+          maxHeight: "10px",
+          maxWidth: "50px",
+        }}
+      >
         Sort by {isSortedByName ? "name" : "date"}
       </button>
       <SongList songs={songs} />

@@ -19,8 +19,19 @@ const SongListItem = ({ eachSong }) => {
     <div>
       <YoutubeEmbed embedId={embedLink} />
       <Link to={`/songs/${eachSong._id}`}>
-        <h3>{eachSong.name}</h3>
-        <h1>{eachSong.image}</h1>
+        <h3
+          style={
+            {
+              /*   display: "flex",
+            justifyContent: "center",
+            marginTop: "10px",
+            marginBottom: "50px", */
+            }
+          }
+        >
+          {eachSong.name}
+        </h3>
+        {/*   <h1>{eachSong.image}</h1> */}
       </Link>
     </div>
   );

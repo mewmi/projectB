@@ -1,5 +1,6 @@
 'use strict';
 const Song = require('../models/songs');
+const User = require('../models/user');
 const express = require('express');
 const { routeGuard } = require('./../middleware/routeguard');
 
@@ -12,16 +13,29 @@ router.get('/', (req, res, next) => {
     .catch((err) => next(err));
 });
 
+//Get random song
+router.get('/random', (req, res, next) => {
+  Song.find().then((songs) => {
+    const randomIndex = Math.floor(Math.random() * songs.length);
+    const randomSong = songs[randomIndex];
+    res.json({ song: randomSong });
+  });
+});
+
+//Get single song
 router.get('/:id', (req, res, next) => {
   const { id } = req.params;
   Song.findById(id)
+    // Song.findById()
+    //   .populate('author')
     .then((song) => res.json({ song }))
     .catch((err) => next(err));
 });
 
 //Post router
-router.post('/', (req, res, next) => {
+router.post('/', routeGuard, (req, res, next) => {
   const { name, link, image, author } = req.body;
+  //const author = req.payload._id;
   Song.create({ name, link, image, author })
     .then((song) => res.json({ song }))
     .catch((err) => next(err));
