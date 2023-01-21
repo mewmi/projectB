@@ -1,20 +1,19 @@
 /* smartphone */
 
+* {
+  box-sizing: border-box;
+}
+body {
+  background: rgb(137, 147, 153);
+  background: radial-gradient(
+    circle,
+    rgba(137, 147, 153, 1) 12%,
+    rgb(31, 83, 113) 55%
+  );
+  font-family: Optima;
+  margin: 10px;
+}
 @media (min-width: 320px) {
-  * {
-    box-sizing: border-box;
-  }
-  body {
-    background: rgb(137, 147, 153);
-    background: radial-gradient(
-      circle,
-      rgba(137, 147, 153, 1) 12%,
-      rgb(31, 83, 113) 55%
-    );
-    font-family: Optima;
-    margin: 10px;
-  }
-
   /*  Logo */
   img.echosmall {
     max-width: 70px;
@@ -172,14 +171,6 @@
 /* Laptop */
 
 @media (min-width: 1281px) {
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: black;
-    color: azure;
-  }
-
   .float-container {
     padding: 20px;
   }
