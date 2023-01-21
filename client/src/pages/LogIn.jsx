@@ -36,6 +36,11 @@ const LogIn = (props) => {
 
   return (
     <div className="float-child-two">
+      <p className="loginText">Access your personal EchoSound space! </p>
+      <p className="loginText">
+        As soon as you login, you will be able to to upload your favourite
+        songs, edit them and create your EchoSound space.
+      </p>
       <form onSubmit={handleFormSubmit} className="float-child-one">
         <label htmlFor="email" className="inputForm">
           Email

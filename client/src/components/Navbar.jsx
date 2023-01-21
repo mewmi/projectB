@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import EchoSmall from "../images/EchoSoundSmall.png";
 import { useAuthContext } from "../context/authentication";
 import Button from "@mui/material/Button";
-import { Container } from "@mui/system";
 
 const Navbar = () => {
   const { user, setUser, setAuthToken } = useAuthContext();

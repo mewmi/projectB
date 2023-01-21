@@ -74,6 +74,9 @@ body {
     font-size: 19px;
     text-align: justify;
   }
+  .loginText {
+    font-size: 23px;
+  }
 
   /* AccountPage */
 
@@ -308,9 +311,6 @@ Footer {
   justify-content: space-between;
   margin: 2em;
   height: 60vh;
-}
-
-#submit-button {
 }
 
 .button-group {

@@ -2,7 +2,7 @@ import React from "react";
 import YoutubeEmbed from "./YoutubeEmbed";
 
 const SongContentHomepage = ({ song }) => {
-  const { name, link, image, author } = song;
+  const { name, link } = song;
 
   const regex = /.*v=/gm;
   const embedLink = link.replace(regex, "");
