@@ -16,8 +16,8 @@ const Footer = () => {
         gridTemplateColumns: "200px 250px",
       }}
     >
-      <h5>Ⓒ Joao Amaral, Julia Lipniewicz, Soumia</h5>
-      <h5>Email: info@echoSound.com</h5>
+      <h5 className="footerWords">Ⓒ Joao Amaral, Julia Lipniewicz, Soumia</h5>
+      <h5 className="footerWords">Email: info@echoSound.com</h5>
     </Container>
   );
 };
