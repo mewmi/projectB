@@ -10,10 +10,36 @@ const SongContent = ({ song }) => {
   return (
     <div>
       <YoutubeEmbed embedId={embedLink} />
-      <h1>{name}</h1>
-      <a href={link}>Song Link</a>
-      <h1>{image}</h1>
-      <h1>{author}</h1>
+      <h1
+        style={{
+          fontSize: "20px",
+          margin: "10px",
+          fontFamily: "Aldrich",
+        }}
+      >
+        {name}
+      </h1>
+      <a
+        href={link}
+        style={{
+          fontSize: "20px",
+          margin: "10px",
+          fontFamily: "Aldrich",
+          color: "black",
+          textDecoration: "none",
+        }}
+      >
+        Song Link
+      </a>
+      <h1
+        style={{
+          fontSize: "20px",
+          margin: "10px",
+          fontFamily: "Aldrich",
+        }}
+      >
+        {author}
+      </h1>
     </div>
   );
 };

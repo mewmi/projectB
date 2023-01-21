@@ -17,11 +17,10 @@ const Navbar = () => {
       {/*  <Container> */}
       {user && (
         <>
-          <li className="navList">
-            <Link to="/" style={{ textDecoration: "none" }}>
-              <img src={EchoSmall} alt="echosmall" className="echosmall" />
-            </Link>
-          </li>
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <img src={EchoSmall} alt="echosmall" className="echosmall" />
+          </Link>
+
           <div className="navbarLinks">
             <ul>
               <li className="navList">
