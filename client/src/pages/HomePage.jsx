@@ -1,5 +1,4 @@
 import React from "react";
-import echosound from "../images/echosound.png";
 import Soundwaves from "../images/Soundwaves.webp";
 import { Container } from "@mui/system";
 import { songLoadRandom } from "../services/songs";

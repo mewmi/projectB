@@ -76,7 +76,7 @@ const LogIn = (props) => {
               textAlign: "right",
             }}
           >
-            Log In
+            Log-In
           </button>
         </div>
       </form>
