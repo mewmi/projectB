@@ -18,20 +18,22 @@ const SongListItem = ({ eachSong }) => {
   return (
     <div className="float-child-two">
       <YoutubeEmbed embedId={embedLink} />
-      <Link className="float-child-two" to={`/songs/${eachSong._id}`}>
-        <h3
-          style={{
-            fontSize: "20px",
-            margin: "10px",
-            fontFamily: "Aldrich",
-            color: "black",
-            textDecoration: "none",
-          }}
-        >
-          {eachSong.name}
-        </h3>
-        {/*   <h1>{eachSong.image}</h1> */}
-      </Link>
+      <div className="float-child-two">
+        <Link to={`/songs/${eachSong._id}`}>
+          <h3
+            style={{
+              fontSize: "20px",
+              margin: "10px",
+              fontFamily: "Aldrich",
+              color: "black",
+              textDecoration: "none",
+            }}
+          >
+            {eachSong.name}
+          </h3>
+          {/*   <h1>{eachSong.image}</h1> */}
+        </Link>
+      </div>
     </div>
   );
 };
