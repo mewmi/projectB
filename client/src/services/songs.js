@@ -6,6 +6,9 @@ export const songLoadSingle = (id) =>
 export const songLoadAll = () =>
   api.get(`/songs`).then((response) => response.data);
 
+export const songLoadRandom = () =>
+  api.get("/songs/random").then((response) => response.data);
+
 export const songAdd = (song, storedToken) =>
   api
     .post(`/songs`, song, {

@@ -2,11 +2,22 @@ import React from "react";
 import echosound from "../images/echosound.png";
 import Soundwaves from "../images/Soundwaves.webp";
 import { Container } from "@mui/system";
+import { songLoadRandom } from "../services/songs";
+import { useEffect, useState } from "react";
+import SongContent from "../components/SongContent";
+import { useAuthContext } from "../context/authentication";
 
 const HomePage = () => {
+  const [song, setSong] = useState(null);
+  const { user } = useAuthContext();
+
+  useEffect(() => {
+    songLoadRandom().then((data) => setSong(data.song));
+  }, []);
+
   return (
     <Container>
-      <div className="">
+      <div className="" style={{ display: "inline" }}>
         <p
           className="welcome"
           style={{ fontFamily: "Aldrich", fontWeight: "bold" }}
@@ -32,6 +43,9 @@ const HomePage = () => {
           only one click. Create your favorite sample list for quick excess.
           Enjoy your new sounds, which will echo in your ear for a while.{" "}
         </p>
+      </div>
+      <div className="flex items-center justify-center">
+        {user && song && <SongContent song={song} />}
       </div>
     </Container>
   );

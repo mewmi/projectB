@@ -13,6 +13,15 @@ router.get('/', (req, res, next) => {
     .catch((err) => next(err));
 });
 
+//Get random song
+router.get('/random', (req, res, next) => {
+  Song.find().then((songs) => {
+    const randomIndex = Math.floor(Math.random() * songs.length);
+    const randomSong = songs[randomIndex];
+    res.json({ song: randomSong });
+  });
+});
+
 //Get single song
 router.get('/:id', (req, res, next) => {
   const { id } = req.params;

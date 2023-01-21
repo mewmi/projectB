@@ -16,10 +16,10 @@ const schema = new mongoose.Schema(
       trim: true,
       required: true
     }
-    //author: {
-    //  type: mongoose.Schema.Types.ObjectId,
-    //  required: true,
-    //  ref: 'User'
+    // author: {
+    //   type: mongoose.Schema.Types.ObjectId,
+    //   required: true,
+    //   ref: 'User'
     // }
   },
   { timestamps: { createdAt: 'created_at' } }
