@@ -41,10 +41,7 @@ const SongSinglePage = () => {
           </Link>
         </button>
         <form onSubmit={handleSongDeleteSubmit}>
-          <button
-            className="button-86"
-            style={{ maxHeight: "10px", alignItems: "center" }}
-          >
+          <button className="button-86" id="delete-button">
             Delete Song
           </button>
         </form>

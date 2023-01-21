@@ -310,7 +310,14 @@ Footer {
   height: 60vh;
 }
 
-#submit-button {
+#button-id {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+  margin: auto 1em;
+  margin-bottom: 220px;
 }
 
 .button-group {
@@ -319,7 +326,15 @@ Footer {
   align-items: center;
   justify-content: space-between;
   padding: 2em;
-  margin: auto 10em;
+  margin: auto 40em;
+}
+
+#delete-button {
+  margin-left: auto;
+  margin-right: auto;
+  border: 5px;
+  margin-top: 10px;
+  font-family: Aldrich;
 }
 
 .footerWords {
