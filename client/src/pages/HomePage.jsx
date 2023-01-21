@@ -30,7 +30,7 @@ const HomePage = () => {
           </div>
 
           <br />
-          <p className="">
+          <p className="shortText">
             <i>The application which provides you with all sorts of sounds</i>
           </p>
           <br />

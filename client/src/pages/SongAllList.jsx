@@ -10,6 +10,7 @@ const SongAllList = () => {
   useEffect(() => {
     songLoadAll().then((data) => setSongs(data.songs));
   }, []);
+
   const handleSortButton = () => {
     isSortedByName ? sortByName() : sortByDate();
     setIsSortedByName(!isSortedByName);

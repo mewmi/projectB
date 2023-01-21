@@ -71,7 +71,7 @@ body {
   }
 
   .introText {
-    font-size: 12px;
+    font-size: 17px;
     text-align: justify;
   }
 
@@ -253,4 +253,12 @@ Footer {
   justify-content: space-between;
   padding: 2em;
   margin: auto 10em;
+}
+
+.footerWords {
+  color: #dad4d4;
+}
+
+.shortText {
+  font-size: 17px;
 }
