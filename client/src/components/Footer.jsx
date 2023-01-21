@@ -5,11 +5,9 @@ const Footer = () => {
   return (
     <Container
       className="footer"
-      sx={{
+      xl={{
         position: "absolute",
         bottom: 0,
-        /* backgroundColor: "lightsteelblue" */
-        display: "flex",
         justifyContent: "space-evenly",
         color: "white",
         fontFamily: "Aldrich",
