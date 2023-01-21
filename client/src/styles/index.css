@@ -183,18 +183,10 @@
   .float-container {
     padding: 20px;
   }
-
-  .float-child-one {
-    width: 80%;
-    float: left;
-    padding: 20px;
-  }
-
   .float-child-two {
-    width: 20%;
-    float: left;
-    padding: 20px;
     padding-top: 6%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
