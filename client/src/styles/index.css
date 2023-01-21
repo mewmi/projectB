@@ -10,7 +10,7 @@ body {
     rgba(137, 147, 153, 1) 12%,
     rgb(31, 83, 113) 55%
   );
-  font-family: Optima;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   min-height: 100vh;
   margin: 0;
 }
