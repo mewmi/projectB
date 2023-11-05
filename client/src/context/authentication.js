@@ -18,6 +18,7 @@ export const AuthProviderWrapper = ({ children }) => {
   useEffect(() => {
     if (authToken) {
       verify(authToken).then((data) => {
+        console.log(data);
         const { user } = data;
         setUser(user);
       });

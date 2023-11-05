@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { songAdd } from "../services/songs";
 import SongForm from "../components/SongForm";
+import { useAuthContext } from "../context/authentication";
 
 const SongCreate = () => {
+  const { authToken } = useAuthContext();
   const [song, setSong] = useState({
     name: "",
     link: "",
@@ -13,7 +15,7 @@ const SongCreate = () => {
   const navigate = useNavigate();
 
   const handleSongCreation = () => {
-    songAdd(song).then((data) => {
+    songAdd(song, authToken).then((data) => {
       const id = data.song._id;
       navigate(`/songs/${id}`);
     });

@@ -5,30 +5,50 @@ import SongList from "../components/SongList";
 
 const SongAllList = () => {
   const [songs, setSongs] = useState([]);
+  const [isSortedByName, setIsSortedByName] = useState(true);
 
   useEffect(() => {
     songLoadAll().then((data) => setSongs(data.songs));
   }, []);
 
-  /*
-  Runs every time component is rendered
-  useEffect(() => {
-    
-  })
-
-  // First time component is rendered
-  useEffect(() => {
-
-  }, []);
-
-  // First time comp is rendered and everythime modalIsOpen changes
-  useEffect(() => {
-
-  }, [modalIsOpen])
-  */
+  const handleSortButton = () => {
+    isSortedByName ? sortByName() : sortByDate();
+    setIsSortedByName(!isSortedByName);
+  };
+  const sortByName = () => {
+    const newArray = songs.sort((a, b) => {
+      return a.name.toLowerCase() > b.name.toLowerCase()
+        ? 1
+        : a.name.toLowerCase() < b.name.toLowerCase()
+        ? -1
+        : 0;
+    });
+    console.log(newArray);
+    setSongs([...newArray]);
+  };
+  const sortByDate = () => {
+    const newArray = songs.sort((a, b) => {
+      return new Date(b.created_at) - new Date(a.created_at);
+    });
+    console.log(newArray);
+    setSongs([...newArray]);
+  };
 
   return (
-    <div>
+    <div class="float-child-two">
+      <button
+        onClick={handleSortButton}
+        className="button-86"
+        style={{
+          fontSize: "20px",
+          margin: "10px",
+          fontFamily: "Aldrich",
+          color: "black",
+          textDecoration: "none",
+        }}
+      >
+        Sort by {isSortedByName ? "name" : "date"}
+      </button>
       <SongList songs={songs} />
     </div>
   );

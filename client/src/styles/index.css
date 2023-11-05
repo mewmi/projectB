@@ -1,25 +1,357 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* smartphone */
 
-
-
+* {
+  box-sizing: border-box;
+}
 body {
-
-  margin: 0 auto;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: grey;
-
+  background: rgb(137, 147, 153);
+  background: radial-gradient(
+    circle,
+    rgba(137, 147, 153, 1) 12%,
+    rgb(31, 83, 113) 55%
+  );
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  margin: 0;
 }
 
+@media (min-width: 320px) {
+  /*  Logo */
+  img.echosmall {
+    max-width: 70px;
+    margin: 0%;
+    padding: 0%;
+    border: 0;
+  }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  /*   .navbarLinks {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    color: rgb(255, 255, 255);
+  } */
+
+  .navbar {
+    background: rgb(115, 134, 145);
+  }
+  nav,
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    /* justify-content: "space-evenly";
+    align-items: center;
+    list-style: none; */
+    /* text-align: center; */
+    margin: auto;
+  }
+  .navList {
+    padding: 5px;
+    /* display: grid; */
+    /*    grid-template-columns: 180px 180px 180px; */
+  }
+
+  /*   Homepage */
+  .welcome {
+    text-align: center;
+
+    font-size: 20px;
+  }
+
+  .float-child-two {
+    text-align: center;
+    text-decoration: "none";
+  }
+
+  /* Homepage Img */
+  img.echosound {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .introText {
+    font-size: 19px;
+    text-align: justify;
+  }
+  .loginText {
+    font-size: 23px;
+  }
+
+  /* AccountPage */
+
+  img.logo {
+    max-width: 50%;
+    max-height: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 30px;
+  }
+
+  /* animated Buttons */
+
+  .button-86 {
+    all: unset;
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    position: relative;
+    color: #f0f0f0;
+    cursor: pointer;
+    z-index: 1;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
+  .button-86::after,
+  .button-86::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -99999;
+    transition: all 0.4s;
+  }
+
+  .button-86::before {
+    transform: translate(0%, 0%);
+    width: 100%;
+    height: 100%;
+    background: #28282d;
+    border-radius: 10px;
+  }
+
+  .button-86::after {
+    transform: translate(10px, 10px);
+    width: 35px;
+    height: 35px;
+    background: #ffffff15;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 50px;
+  }
+
+  .button-86:hover::before {
+    transform: translate(5%, 20%);
+    width: 110%;
+    height: 110%;
+  }
+
+  .button-86:hover::after {
+    border-radius: 10px;
+    transform: translate(0, 0);
+    width: 100%;
+    height: 100%;
+  }
+
+  .button-86:active::after {
+    transition: 0s;
+    transform: translate(0, 5%);
+  }
+
+  .button-87 {
+    all: unset;
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    position: relative;
+    color: #f0f0f0;
+    cursor: pointer;
+    z-index: 1;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
+  .button-87::after,
+  .button-87::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -99999;
+    transition: all 0.4s;
+  }
+
+  .button-87::before {
+    transform: translate(0%, 0%);
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    border-radius: 10px;
+  }
+
+  .button-87::after {
+    transform: translate(10px, 10px);
+    width: 35px;
+    height: 35px;
+    background: #00000015;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 50px;
+  }
+
+  .button-87:hover::before {
+    transform: translate(5%, 20%);
+    width: 110%;
+    height: 110%;
+  }
+
+  .button-87:hover::after {
+    border-radius: 10px;
+    transform: translate(0, 0);
+    width: 100%;
+    height: 100%;
+  }
+
+  .button-87:active::after {
+    transition: 0s;
+    transform: translate(0, 5%);
+  }
 }
 
+/* All Songs Video */
 
+.videoResponsive {
+  position: relative;
+  width: 100%;
+}
+.videoResponsive iframe {
+  /*  position: absolute; */
+  /*     margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ */
+}
+
+/* ---------------------------- */
+
+/* tablet  */
+@media (min-width: 961px) {
+}
+
+/* Laptop */
+
+@media (min-width: 1281px) {
+  .float-container {
+    padding: 20px;
+  }
+  .float-child-two {
+    padding-top: 6%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .navbar {
+    background: rgb(115, 134, 145);
+  }
+
+  nav {
+    top: 0;
+    /*   display: flex; */
+    /* justify-content: "space-evenly"; */
+    /*  align-items: center; */
+    /*     list-style: none;
+    text-align: center; */
+    /*     margin: auto; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .navList {
+    /*     padding: 5px;
+    display: grid; */
+
+    /*    grid-template-columns: 180px 180px 180px; */
+  }
+
+  .inputForm {
+    font-size: 30px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    border-radius: 5px;
+    align-items: center;
+  }
+}
+
+/* _________________________
+FOR ALL SIZES */
+/* 
+Footer {
+  color: white;
+  position: fixed;
+  bottom: 0;
+} */
+.footer {
+  margin-top: auto;
+  background: rgb(115, 134, 145);
+}
+
+.float-child-one {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2em;
+  height: 60vh;
+}
+
+#button-id {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+  margin: auto 1em;
+  margin-bottom: 220px;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2em;
+  margin: auto 40em;
+}
+
+#delete-button {
+  margin-left: auto;
+  margin-right: auto;
+  border: 5px;
+  margin-top: 10px;
+  font-family: Aldrich;
+}
+
+.footerWords {
+  color: #dad4d4;
+}
+
+.shortText {
+  font-size: 23px;
+}
+
+/* Account Page Buttons */
+
+#profileChange {
+  margin-right: -90px;
+  margin-left: 0px;
+  text-decoration: none;
+}

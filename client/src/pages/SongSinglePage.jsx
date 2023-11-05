@@ -19,13 +19,35 @@ const SongSinglePage = () => {
   }, [id]);
 
   return (
-    <div>
+    <div className="float-child-two">
       {" "}
       {song && <SongContent song={song} />}
-      <div>
-        <Link to={`/songs/${id}/edit`}>Edit Song</Link>
+      <div className="button-group">
+        <button
+          className="button-87"
+          style={{
+            maxHeight: "30px",
+            alignItems: "center",
+            marginTop: "-60px",
+          }}
+        >
+          <Link
+            to={`/songs/${id}/edit`}
+            style={{
+              fontSize: "20px",
+              margin: "10px",
+              fontFamily: "Aldrich",
+              color: "black",
+              textDecoration: "none",
+            }}
+          >
+            Edit Song
+          </Link>
+        </button>
         <form onSubmit={handleSongDeleteSubmit}>
-          <button>Delete Song</button>
+          <button className="button-86" id="delete-button">
+            Delete Song
+          </button>
         </form>
       </div>
     </div>
